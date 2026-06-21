@@ -3,6 +3,7 @@
 
 #include "../Vec2.h"
 #include <cmath>
+#include <ostream>
 
 Vec2::Vec2()
     : m_x(0.0f), m_y(0.0f)
@@ -65,8 +66,62 @@ Vec2 Vec2::Normalized() const
     return (*this) / magnitude;
 }
 
+Vec2& Vec2::operator+=(const Vec2& value)
+{
+    m_x += value.m_x;
+    m_y += value.m_y;
+
+    return (*this);
+}
+
+Vec2& Vec2::operator*=(float value)
+{
+    m_x *= value;
+    m_y *= value;
+
+    return (*this);
+}
+
+Vec2& Vec2::operator-=(const Vec2& value)
+{
+    m_x -= value.m_x;
+    m_y -= value.m_y;
+
+    return (*this);
+}
+
+Vec2& Vec2::operator/=(float value)
+{
+    m_x /= value;
+    m_y /= value;
+
+    return (*this);
+}
+
 float Vec2::Dot(const Vec2& value) const
 {
     return m_x * value.m_x +
            m_y * value.m_y;
+}
+
+bool Vec2::operator==(const Vec2& value) const
+{
+    return (m_x == value.m_x && m_y == value.m_y);
+}
+
+bool Vec2::operator!=(const Vec2& value) const
+{
+    return (m_x != value.m_x || m_y != value.m_y);
+}
+
+Vec2::Vec2(const Vec2& value)
+{
+    m_x = value.m_x;
+    m_y = value.m_y;
+}
+
+std::ostream& operator<<(std::ostream& os, const Vec2& value)
+{
+    os << "(x : " << value.m_x << ", Y : " << value.m_y << ")" << std::endl;
+    return os;
 }

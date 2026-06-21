@@ -4,6 +4,8 @@
 #ifndef UCXX_MATH_VECTORS_VEC2_H
 #define UCXX_MATH_VECTORS_VEC2_H
 
+#include <ostream>
+
 struct Vec2
 {
     float m_x;
@@ -11,11 +13,20 @@ struct Vec2
 
     Vec2(); // (0.0f, 0.0f)
     Vec2(float x, float y);
+    Vec2(const Vec2& value);
 
-    Vec2 operator+(const Vec2& a) const;   // add 2 vectors
-    Vec2 operator*(const float& a) const;  // multiply 1 vector * float (scalaire)
-    Vec2 operator-(const Vec2& a) const;   // 1 vector - 1 vector
-    Vec2 operator/(const float& a) const;  // dvise 1 vector / float
+    Vec2 operator+(const Vec2& value) const;   
+    Vec2 operator*(const float& value) const; 
+    Vec2 operator-(const Vec2& value) const;
+    Vec2 operator/(const float& value) const; 
+    
+    bool operator==(const Vec2& value) const;
+    bool operator!=(const Vec2& value) const;
+
+    Vec2& operator+=(const Vec2& value);   
+    Vec2& operator*=(float value);  
+    Vec2& operator-=(const Vec2& value);   
+    Vec2& operator/=(float value);
 
     float Magnitude() const;
     float MagnitudeSquared() const;
@@ -23,7 +34,11 @@ struct Vec2
     Vec2 Normalized() const;
 
     float Dot(const Vec2& value) const;
+
+private:
+    float m_z = 0;
 };
 
+std::ostream& operator<<(std::ostream& os, const Vec2& value);
 
 #endif
