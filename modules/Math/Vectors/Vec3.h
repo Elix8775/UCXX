@@ -34,7 +34,7 @@ struct Vec3
     Vec3& operator/=(float value);
 
     static Vec3 CrossProduct(const Vec3& a, const Vec3& b);
-    static float DotProduct(const Vec3& a, const Vec3& b);
+    static float Dot(const Vec3& a, const Vec3& b);
 };
 std::ostream& operator<<(std::ostream& os, const Vec3& value);
 

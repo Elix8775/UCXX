@@ -5,24 +5,18 @@
 #include <math.h>
 
 Vec3::Vec3()
+	: m_x(0.0f), m_y(0.0f), m_z(0.0f)
 {
-	m_x = 0.0f;
-	m_y = 0.0f;
-	m_z = 0.0f;
 }
 
 Vec3::Vec3(float x, float y, float z)
+	: m_x(x), m_y(y), m_z(z)
 {
-	m_x = x;
-	m_y = y;
-	m_z = z;
 }
 
 Vec3::Vec3(const Vec3& value)
+	: m_x(value.m_x), m_y(value.m_y), m_z(value.m_z)
 {
-	m_x = value.m_x;
-	m_y = value.m_y;
-	m_z = value.m_z;
 }
 
 Vec3 Vec3::operator+(const Vec3& value) const
@@ -114,7 +108,7 @@ Vec3 Vec3::Normalized() const
 	return (*this) / Magnitude();
 }
 
-float Vec3::DotProduct(const Vec3& a, const Vec3& b)
+float Vec3::Dot(const Vec3& a, const Vec3& b)
 {
 	return a.m_x * b.m_x + a.m_y * b.m_y + a.m_z * b.m_z;
 }
