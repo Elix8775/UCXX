@@ -1,6 +1,3 @@
-// Vec4 (header)
-// Author: Elix8775
-
 #ifndef UCXX_MATH_VECTORS_VEC4_H
 #define UCXX_MATH_VECTORS_VEC4_H
 

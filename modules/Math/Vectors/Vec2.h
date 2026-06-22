@@ -1,6 +1,3 @@
-// Vec2 (header)
-// Author: Elix8775
-
 #ifndef UCXX_MATH_VECTORS_VEC2_H
 #define UCXX_MATH_VECTORS_VEC2_H
 

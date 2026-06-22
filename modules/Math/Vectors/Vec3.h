@@ -1,6 +1,3 @@
-// Vec3 (header)
-// Author: Elix8775
-
 #ifndef UCXX_MATH_VECTORS_VEC3_H
 #define UCXX_MATH_VECTORS_VEC3_H
 

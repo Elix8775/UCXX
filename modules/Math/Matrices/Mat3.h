@@ -1,6 +1,3 @@
-// Mat3 (header)
-// Author: Elix8775
-
 #ifndef UCXX_MATH_MATRICES_MAT3_H
 #define UCXX_MATH_MATRICES_MAT3_H
 

@@ -1,6 +1,3 @@
-// Mat2 (header)
-// Author: Elix8775
-
 #ifndef UCXX_MATH_MATRICES_MAT2_H
 #define UCXX_MATH_MATRICES_MAT2_H
 
