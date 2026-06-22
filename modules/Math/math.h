@@ -11,5 +11,8 @@
 
 #include "Matrices/Mat2.h"
 #include "Matrices/Mat3.h"
+#include "Matrices/Mat4.h"
+
+#include "Quaternion/Quat.h"
 
 #endif
