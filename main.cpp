@@ -3,7 +3,9 @@
 
 int main()
 {
-    
+    Mat3 a;
+
+    std::cout << a;
 
     return 0;
 }

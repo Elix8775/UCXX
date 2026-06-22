@@ -6,5 +6,10 @@
 #define UCXX_MATH_H
 
 #include "Vectors/Vec2.h"
+#include "Vectors/Vec3.h"
+#include "Vectors/Vec4.h"
+
+#include "Matrices/Mat2.h"
+#include "Matrices/Mat3.h"
 
 #endif

@@ -4,7 +4,7 @@
 #ifndef UCXX_MATH_MATRICES_MAT2_H
 #define UCXX_MATH_MATRICES_MAT2_H
 
-#include "../../Vectors/Vec2.h"
+#include "../Vectors/Vec2.h"
 #include <ostream>
 
 struct Mat2
