@@ -3,5 +3,7 @@
 
 #include "Ray/Ray.h"
 #include "Sphere/Sphere.h"
+#include "AABB/AABB.h"
+#include "Collisions/Collisions.h"
 
 #endif

@@ -2,5 +2,6 @@
 *.jpg
 *.jpeg
 *.env
+*.o
 main.cpp
 Makefile

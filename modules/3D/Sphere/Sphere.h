@@ -8,8 +8,6 @@ struct Sphere
 {
     Vec3 center;
     float radius;
-
-    bool IntersectRaySphere(const Ray& ray, const Sphere& sphere, float& t);
 };
 
 
