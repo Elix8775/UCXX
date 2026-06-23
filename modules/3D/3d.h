@@ -2,5 +2,6 @@
 #define UCXX_3D_H
 
 #include "Ray/Ray.h"
+#include "Sphere/Sphere.h"
 
 #endif
