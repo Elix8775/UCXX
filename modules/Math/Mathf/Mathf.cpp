@@ -1,3 +1,6 @@
+// Main function Matf.cpp
+// Author: La quête d'un dévelopeur (marwan)
+
 #include "Mathf.h"
 #include <iostream>
 #include <cmath>

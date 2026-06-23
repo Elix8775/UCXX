@@ -57,10 +57,13 @@ float Vec3::MagnitudeSquared() const
 
 void Vec3::Normalize()
 {
-	float magnitude = Magnitude();
-	m_x /= magnitude;
-	m_y /= magnitude;
-	m_z /= magnitude;
+    float m = Magnitude();
+    if (m == 0.0f) return;
+
+    float inv = 1.0f / m;
+    m_x *= inv;
+    m_y *= inv;
+    m_z *= inv;
 }
 
 Vec3& Vec3::operator+=(const Vec3& value)
@@ -115,7 +118,10 @@ bool Vec3::operator!=(const Vec3& value) const
 
 Vec3 Vec3::Normalized() const
 {
-	return (*this) / Magnitude();
+    float m = Magnitude();
+    if (m == 0.0f) return Vec3(0,0,0);
+
+    return (*this) / m;
 }
 
 float Vec3::Dot(const Vec3& a, const Vec3& b)

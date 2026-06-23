@@ -1,3 +1,6 @@
+// Main function Quat.cpp
+// Author: Elix8775
+
 #include "Quat.h"
 #include "../Mathf/Mathf.h"
 #include "../Matrices/Mat4.h"

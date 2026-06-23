@@ -1,3 +1,6 @@
+// Main function Mat4.cpp
+// Author: Elix8775
+
 #include "../Mat4.h"
 #include "../Mat3.h"
 # define M_PI           3.14159265358979323846

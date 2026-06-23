@@ -10,5 +10,6 @@
 #define UCXX_H
 
 #include "modules/Math/math.h"
+#include "modules/3D/Ray/Ray.h"
 
 #endif
