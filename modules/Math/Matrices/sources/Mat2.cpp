@@ -2,6 +2,7 @@
 // Author: ELix8775
 
 #include "../Mat2.h"
+#include "../../Mathf/Mathf.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -152,7 +153,7 @@ Mat2 Mat2::Identity()
 
 Mat2 Mat2::Rotate(const float& angle)
 {
-    float rad = angle * M_PI / 180.0f;
+    float rad = angle * Mathf::DegToRad;
     return Mat2(cosf(rad), -sinf(rad),
                 sinf(rad),  cosf(rad));
 }

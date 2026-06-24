@@ -2,6 +2,7 @@
 // Author: Elix8775
 
 #include "../Mat3.h"
+#include "../../Mathf/Mathf.h"
 #include <cmath>
 
 Mat3::Mat3()
@@ -147,7 +148,7 @@ Mat3 Mat3::Translate(const Vec2& translate)
 
 Mat3 Mat3::RotateZ(const float& angle)
 {
-    float rad = angle * M_PI / 180.0f;
+    float rad = angle * Mathf::DegToRad;
     return Mat3( cosf(rad), -sinf(rad), 0.0f,
                  sinf(rad),  cosf(rad), 0.0f,
                  0.0f,       0.0f,      1.0f);

@@ -1,5 +1,9 @@
 #include "../Collisions.h"
 
+#include <algorithm>
+
+namespace ucxx
+{
 bool IntersectRaySphere(const Ray& ray, const Sphere& sphere, float& t)
 {
     Vec3 L = ray.origin - sphere.center;
@@ -62,7 +66,15 @@ bool IntersectRayAABB(const Ray& ray, const AABB& box, float& t)
     if (tzmax < tmax)
         tmax = tzmax;
 
-    t = tmin;
-
-    return tmax >= 0.0f;
+    if (tmin < 0.0f)
+    {
+        if (tmax < 0.0f) return false;
+        t = tmax;
+    }
+    else
+    {
+        t = tmin;
+    }
+    return true;
+}
 }

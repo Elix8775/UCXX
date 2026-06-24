@@ -50,3 +50,6 @@ float Mathf::Min(float a, float b)
 {
 	return fminf(a, b);
 }
+
+float Mathf::Max(float a, float b) { return fmaxf(a, b); }
+float Mathf::Abs(float a)          { return fabsf(a); }

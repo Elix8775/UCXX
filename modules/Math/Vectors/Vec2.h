@@ -31,9 +31,6 @@ struct Vec2
     Vec2 Normalized() const;
 
     float Dot(const Vec2& value) const;
-
-private:
-    float m_z = 0;
 };
 
 std::ostream& operator<<(std::ostream& os, const Vec2& value);

@@ -17,6 +17,8 @@ public:
 	static float Max(float a, float b, float c);
 	static float Min(float a, float b, float c);
 	static float Min(float a, float b);
+	static float Max(float a, float b);
+	static float Abs(float a);
 };
 
 
