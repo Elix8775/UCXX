@@ -113,7 +113,9 @@ bool Vec2::operator==(const Vec2& value) const
 
 bool Vec2::operator!=(const Vec2& value) const
 {
-    return (m_x != value.m_x || m_y != value.m_y);
+    const float epsilon = 1e-5f;
+    return fabsf(m_x - value.m_x) >= epsilon ||
+           fabsf(m_y - value.m_y) >= epsilon;
 }
 
 Vec2::Vec2(const Vec2& value)
