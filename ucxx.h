@@ -13,5 +13,6 @@
 
 #include "modules/Math/math.h"
 #include "modules/3D/3d.h"
+#include "modules/Window/Window.h"
 
 #endif
